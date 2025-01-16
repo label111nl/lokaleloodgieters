@@ -1,1 +1,101 @@
-# lokaleloodgieters
+Lokale Loodgieters Platform
+Een platform dat klanten verbindt met gekwalificeerde loodgieters via een eenvoudig offerte-aanvraagproces.
+
+Over het Project
+Lokale Loodgieters is een platform waar klanten eenvoudig offertes kunnen aanvragen voor loodgieterswerkzaamheden. Loodgieters met een actief abonnement krijgen toegang tot deze leads via een dashboard. Het platform faciliteert de initiële connectie tussen klant en loodgieter, waarna verdere communicatie en afhandeling buiten het platform plaatsvindt.
+
+Technische Stack
+Frontend: Next.js 14 (App Router)
+Backend: Supabase (PostgreSQL + Auth)
+Styling: Tailwind CSS + shadcn/ui
+Authentication: Supabase Auth
+Database: PostgreSQL (via Supabase)
+Hosting: Vercel
+Core Features
+Publieke Website
+Homepage
+
+Diensten overzicht
+Direct offerte aanvragen via dropdown
+Statistieken en vertrouwensindicatoren
+Hoe het werkt sectie
+Offerte Aanvraagformulier
+
+Stapsgewijs formulier
+Upload mogelijkheid voor foto's
+Locatie selectie
+Urgentie niveau bepaling
+Automatische bevestigingsmail
+Diensten Pagina's
+
+Gedetailleerde informatie per dienst
+Stad-specifieke landingspagina's
+Direct offerte aanvragen per dienst
+Loodgieters Dashboard
+Authenticatie
+
+Login/registratie systeem
+Wachtwoord reset functionaliteit
+Verificatie status indicator
+Lead Management
+
+Overzicht van beschikbare leads
+Gedetailleerde lead informatie
+Mogelijkheid tot reageren op leads
+Maximaal 4 reacties per lead
+Profiel Beheer
+
+Bedrijfsinformatie aanpassen
+Logo upload
+Service gebied instellen
+Specialisaties aangeven
+Abonnement Status
+
+Indicatie van huidige abonnement
+Verificatie status
+Toegang tot leads op basis van status
+Admin Dashboard
+Gebruikersbeheer
+
+Overzicht van alle loodgieters
+Verificatie van loodgieters
+Account activatie/deactivatie
+Abonnement beheer
+Lead Management
+
+Overzicht van alle aanvragen
+Lead status beheer
+Reacties monitoren
+Spam filtering
+Statistieken
+
+Aantal actieve loodgieters
+Aantal leads per periode
+Conversie statistieken
+Regionale spreiding
+Database Schema
+Hoofdtabellen
+users - Basis gebruikersgegevens
+roles - Gebruikersrollen (admin, loodgieter, klant)
+plumbers - Loodgieter specifieke informatie
+leads - Offerte aanvragen
+lead_responses - Reacties op aanvragen
+admins - Admin gebruikers
+admin_settings - Systeeminstellingen
+Relaties
+Users hebben één rol
+Plumbers zijn gekoppeld aan een user
+Leads kunnen meerdere responses hebben
+Responses zijn gekoppeld aan één plumber
+Beveiliging
+Row Level Security (RLS) in Supabase
+Role-based access control
+Verificatie systeem voor loodgieters
+Admin goedkeuring voor nieuwe accounts
+Beveiligde API routes
+Bescherming tegen spam en misbruik
+Notificaties
+Email notificaties voor nieuwe leads
+Bevestigingsmails voor klanten
+Verificatie emails voor loodgieters
+Admin notificaties voor nieuwe registraties
